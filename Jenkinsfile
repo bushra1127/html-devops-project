@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKER_REPO = "bushradockerhub/html-devops-project"
+    DOCKER_REPO = "bushradockerhub/devops-project"
     DOCKER_CREDENTIALS_ID = 'dockerhub-creds'
     K8S_NAMESPACE = 'devops-demo'
     IMAGE_TAG = "${BUILD_NUMBER}"
