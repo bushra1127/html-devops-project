@@ -7,6 +7,7 @@ pipeline {
     K8S_NAMESPACE = 'devops-demo'
     IMAGE_TAG = "${BUILD_NUMBER}"
     IMAGE = "${DOCKER_REPO}:${IMAGE_TAG}"
+    KUBECONFIG = "/var/lib/jenkins/.kube/config"
   }
 
   stages {
@@ -56,6 +57,7 @@ pipeline {
     stage('Deploy to Kubernetes') {
       steps {
         sh '''
+        
           # Create namespace if missing
           kubectl get ns devops-demo || kubectl create ns devops-demo
 
