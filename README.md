@@ -1,6 +1,6 @@
 # HTML DevOps Project
 
-Simple static site served with nginx. Jenkins pipeline builds a Docker image and deploys to Kubernetes.
+Simple static website served with nginx. Jenkins pipeline builds a Docker image and deploys to Kubernetes.
 
 ### Setup
 1. Replace placeholders in `Jenkinsfile`.
